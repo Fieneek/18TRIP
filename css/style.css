@@ -83,6 +83,16 @@ header {
   color: #000;
 }
 
+.name-kafka {
+  background-color: #9a87cc; /* темніший фіолетовий */
+  color: #fff;
+  padding: 0.2em 0.6em;
+  border-radius: 8px;
+  font-weight: bold;
+  display: inline-block;
+  margin-bottom: 0.3em;
+}
+
 .bubble-renga {
   background-color: #EED59E;
   color: #000;
