@@ -57,6 +57,33 @@ header {
   border-radius: 4px;
   font-weight: bold;
   display: inline-block;
+  margin-bottom: 0.3em;
+}
+
+/* Персоналізовані імена */
+.name-kafka {
+  background-color: #9a87cc;
+  color: #fff;
+}
+
+.name-akuta {
+  background-color: #e08a50;
+  color: #fff;
+}
+
+.name-renga {
+  background-color: #c2a858;
+  color: #000;
+}
+
+.name-yukikaze {
+  background-color: #5fb8dd;
+  color: #000;
+}
+
+.name-ushio {
+  background-color: #89c774;
+  color: #000;
 }
 
 .bubble {
@@ -67,12 +94,7 @@ header {
   max-width: 80%;
 }
 
-.illustration {
-  display: block;
-  max-width: 100%;
-  margin: 20px auto;
-}
-
+/* Бульбашки */
 .bubble-kafka {
   background-color: #C8B7FF;
   color: #000;
@@ -81,16 +103,6 @@ header {
 .bubble-akuta {
   background-color: #FFC199;
   color: #000;
-}
-
-.name-kafka {
-  background-color: #9a87cc; /* темніший фіолетовий */
-  color: #fff;
-  padding: 0.2em 0.6em;
-  border-radius: 8px;
-  font-weight: bold;
-  display: inline-block;
-  margin-bottom: 0.3em;
 }
 
 .bubble-renga {
@@ -106,4 +118,21 @@ header {
 .bubble-ushio {
   background-color: #CBF899;
   color: #000;
+}
+
+.illustration {
+  display: block;
+  max-width: 100%;
+  max-height: 400px;
+  margin: 20px auto;
+}
+
+/* Адаптивність для телефону */
+@media (max-width: 600px) {
+  body {
+    font-size: 18px;
+  }
+  .bubble {
+    max-width: 100%;
+  }
 }
