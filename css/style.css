@@ -72,3 +72,28 @@ header {
   max-width: 100%;
   margin: 20px auto;
 }
+
+.bubble-kafka {
+  background-color: #C8B7FF;
+  color: #000;
+}
+
+.bubble-akuta {
+  background-color: #FFC199;
+  color: #000;
+}
+
+.bubble-renga {
+  background-color: #EED59E;
+  color: #000;
+}
+
+.bubble-yukikaze {
+  background-color: #A3DFFF;
+  color: #000;
+}
+
+.bubble-ushio {
+  background-color: #CBF899;
+  color: #000;
+}
