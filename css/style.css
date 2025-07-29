@@ -1,0 +1,74 @@
+:root {
+  --bg: #ffffff;
+  --text: #000000;
+  --bubble-bg: #eeeeee;
+  --name-bg: #cccccc;
+}
+
+[data-theme="dark"] {
+  --bg: #1a1a1a;
+  --text: #eeeeee;
+  --bubble-bg: #333333;
+  --name-bg: #444444;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.projects, .chapters {
+  list-style: none;
+  padding: 0;
+}
+
+.projects li, .chapters li {
+  margin: 8px 0;
+}
+
+.dialogue {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.avatar img {
+  width: 60px;
+  border-radius: 50%;
+}
+
+.text-block {
+  margin-left: 12px;
+}
+
+.name {
+  background-color: var(--name-bg);
+  color: var(--text);
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.bubble {
+  background-color: var(--bubble-bg);
+  padding: 8px;
+  border-radius: 8px;
+  margin-top: 4px;
+  max-width: 80%;
+}
+
+.illustration {
+  display: block;
+  max-width: 100%;
+  margin: 20px auto;
+}
