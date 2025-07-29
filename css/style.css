@@ -18,6 +18,8 @@ body {
   font-family: sans-serif;
   margin: 0;
   padding: 20px;
+  font-size: 16px;
+  line-height: 1.5;
 }
 
 header {
@@ -60,41 +62,42 @@ header {
   margin-bottom: 0.3em;
 }
 
-/* Персоналізовані імена */
+/* Індивідуальні кольори імен */
 .name-kafka {
-  background-color: #9a87cc;
+  background-color: #9a87cc; /* темніший фіолетовий */
   color: #fff;
 }
 
 .name-akuta {
-  background-color: #e08a50;
+  background-color: #e08a50; /* темніший помаранчевий */
   color: #fff;
 }
 
 .name-renga {
-  background-color: #c2a858;
+  background-color: #c2a858; /* темніший жовто-коричневий */
   color: #000;
 }
 
 .name-yukikaze {
-  background-color: #5fb8dd;
+  background-color: #5fb8dd; /* темніший блакитний */
   color: #000;
 }
 
 .name-ushio {
-  background-color: #89c774;
+  background-color: #89c774; /* темніший зелений */
   color: #000;
 }
 
 .bubble {
   background-color: var(--bubble-bg);
-  padding: 8px;
+  padding: 1em;
   border-radius: 8px;
-  margin-top: 4px;
+  margin-top: 0.4em;
   max-width: 80%;
+  line-height: 1.4;
 }
 
-/* Бульбашки */
+/* Індивідуальні кольори бульбашок */
 .bubble-kafka {
   background-color: #C8B7FF;
   color: #000;
@@ -123,32 +126,43 @@ header {
 .illustration {
   display: block;
   max-width: 100%;
-  max-height: 400px;
-  margin: 20px auto;
+  max-height: 80vh;
+  height: auto;
+  margin: 2em auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
-/* Збільшення шрифту для мобільних */
+/* Адаптивність: збільшуємо шрифт та елементи для мобільних */
 @media (max-width: 600px) {
+  html {
+    font-size: 18px;
+  }
+
   body {
-    font-size: 18px; /* базовий текст */
+    font-size: 1rem; /* вже залежить від html font-size */
+    line-height: 1.6;
   }
 
   header h1 {
-    font-size: 1.8rem; /* більший заголовок */
+    font-size: 1.8rem;
   }
 
   header nav a {
-    font-size: 1.2rem; /* посилання "назад" */
-    padding: 0.4em 0.8em;
+    font-size: 1.2rem;
+    padding: 0.5em 1em;
   }
 
   #theme-toggle {
-    font-size: 1.8rem; /* кнопка темної теми */
+    font-size: 1.8rem;
   }
 
   .bubble {
-    max-width: 100%; /* щоб не обрізалось */
-    font-size: 1.1rem; /* текст в бульбашках трохи більший */
+    max-width: 100%;
+    font-size: 1.1rem;
+  }
+
+  .avatar img {
+    width: 70px;
   }
 }
-
