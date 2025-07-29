@@ -127,12 +127,28 @@ header {
   margin: 20px auto;
 }
 
-/* Адаптивність для телефону */
+/* Збільшення шрифту для мобільних */
 @media (max-width: 600px) {
   body {
-    font-size: 18px;
+    font-size: 18px; /* базовий текст */
   }
+
+  header h1 {
+    font-size: 1.8rem; /* більший заголовок */
+  }
+
+  header nav a {
+    font-size: 1.2rem; /* посилання "назад" */
+    padding: 0.4em 0.8em;
+  }
+
+  #theme-toggle {
+    font-size: 1.8rem; /* кнопка темної теми */
+  }
+
   .bubble {
-    max-width: 100%;
+    max-width: 100%; /* щоб не обрізалось */
+    font-size: 1.1rem; /* текст в бульбашках трохи більший */
   }
 }
+
