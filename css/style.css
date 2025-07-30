@@ -166,3 +166,41 @@ header {
     width: 70px;
   }
 }
+
+.project-card {
+  border: 2px solid #ccc;
+  border-radius: 12px;
+  padding: 16px;
+  margin: 16px 0;
+  background-color: var(--bubble-bg);
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.project-card:hover {
+  transform: scale(1.01);
+  border-color: #999;
+}
+
+.project-card a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.project-image {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.project-title {
+  margin: 0 0 8px 0;
+  font-size: 1.4em;
+  color: var(--text);
+}
+
+.project-description {
+  margin: 0;
+  font-size: 1em;
+  color: var(--text);
+}
