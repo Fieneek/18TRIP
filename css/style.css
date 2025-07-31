@@ -28,15 +28,57 @@ header {
   align-items: center;
 }
 
-.projects, .chapters {
-  list-style: none;
-  padding: 0;
+#theme-toggle {
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 
-.projects li, .chapters li {
-  margin: 8px 0;
+/* Кнопка та меню "Розділи" */
+.dropdown {
+  position: relative;
+  display: inline-block;
 }
 
+.dropdown-toggle {
+  background-color: #555;
+  color: white;
+  padding: 8px 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  border-radius: 6px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  z-index: 1;
+
+  right: 0;
+  left: auto;
+
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.dropdown-menu a {
+  color: black;
+  padding: 10px 14px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-menu a:hover {
+  background-color: #eee;
+}
+
+/* Діалоги */
 .dialogue {
   display: flex;
   align-items: flex-start;
@@ -61,57 +103,6 @@ header {
   display: inline-block;
   margin-bottom: 0.3em;
 }
-.project-layout {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  padding: 1rem;
-}
-
-.project-info, .chapter-list {
-  flex: 1 1 300px;
-}
-
-.project-info a {
-  color: var(--link-color);
-  text-decoration: underline;
-}
-
-#theme-toggle {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  font-size: 1.5rem;
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-
-/* Індивідуальні кольори імен */
-.name-renga {
-  background-color: #c2a858; /* темніший жовто-коричневий */
-  color: #fff;
-}
-
-.name-kafka {
-  background-color: #9a87cc; /* темніший фіолетовий */
-  color: #fff;
-}
-
-.name-yukikaze {
-  background-color: #5fb8dd; /* темніший блакитний */
-  color: #fff;
-}
-
-.name-akuta {
-  background-color: #e08a50; /* темніший помаранчевий */
-  color: #fff;
-}
-
-.name-ushio {
-  background-color: #89c774; /* темніший зелений */
-  color: #fff;
-}
 
 .bubble {
   background-color: var(--bubble-bg);
@@ -122,32 +113,69 @@ header {
   line-height: 1.4;
 }
 
-/* Індивідуальні кольори бульбашок */
-.bubble-renga {
-  background-color: #EED59E;
-  color: #000;
-}
+/* Персонажі — Ім’я + Бульбашка */
+.name-renga { background-color: #c2a858; color: #fff; }
+.bubble-renga { background-color: #EED59E; color: #000; }
 
-.bubble-kafka {
-  background-color: #C8B7FF;
-  color: #000;
-}
+.name-kafka { background-color: #9a87cc; color: #fff; }
+.bubble-kafka { background-color: #C8B7FF; color: #000; }
 
-.bubble-yukikaze {
-  background-color: #A3DFFF;
-  color: #000;
-}
+.name-yukikaze { background-color: #5fb8dd; color: #fff; }
+.bubble-yukikaze { background-color: #A3DFFF; color: #000; }
 
-.bubble-akuta {
-  background-color: #FFC199;
-  color: #000;
-}
+.name-akuta { background-color: #e08a50; color: #fff; }
+.bubble-akuta { background-color: #FFC199; color: #000; }
 
-.bubble-ushio {
-  background-color: #CBF899;
-  color: #000;
-}
+.name-ushio { background-color: #89c774; color: #fff; }
+.bubble-ushio { background-color: #CBF899; color: #000; }
 
+/* Інші персонажі */
+.name-ten { background-color: #c0c9d9; color: #000; }
+.bubble-ten { background-color: #E4EBF5; color: #000; }
+
+.name-liguang { background-color: #cc6a5d; color: #fff; }
+.bubble-liguang { background-color: #FF998A; color: #000; }
+
+.name-kiroku { background-color: #9f7cc4; color: #fff; }
+.bubble-kiroku { background-color: #D7ADF3; color: #000; }
+
+.name-nanaki { background-color: #5fb8b1; color: #fff; }
+.bubble-nanaki { background-color: #9BE1DC; color: #000; }
+
+.name-muneuji { background-color: #e49cb8; color: #000; }
+.bubble-muneuji { background-color: #FFD2E9; color: #000; }
+
+.name-raito { background-color: #769e8d; color: #fff; }
+.bubble-raito { background-color: #A0C8B7; color: #000; }
+
+.name-kinari { background-color: #d4b9e9; color: #000; }
+.bubble-kinari { background-color: #F5E4FF; color: #000; }
+
+.name-chihiro { background-color: #6ed6a7; color: #000; }
+.bubble-chihiro { background-color: #A3F5CD; color: #000; }
+
+.name-tao { background-color: #789dbc; color: #fff; }
+.bubble-tao { background-color: #ADCDE4; color: #000; }
+
+.name-kuguri { background-color: #c46e92; color: #fff; }
+.bubble-kuguri { background-color: #EE9BB7; color: #000; }
+
+.name-nagi { background-color: #8784d1; color: #fff; }
+.bubble-nagi { background-color: #B9B7F5; color: #000; }
+
+.name-toi { background-color: #ccb86d; color: #000; }
+.bubble-toi { background-color: #FFEEB2; color: #000; }
+
+.name-ryui { background-color: #e2758d; color: #fff; }
+.bubble-ryui { background-color: #FFA8BE; color: #000; }
+
+.name-yodaka { background-color: #c2be86; color: #000; }
+.bubble-yodaka { background-color: #F8F3D5; color: #000; }
+
+.name-netaro { background-color: #dd70b7; color: #fff; }
+.bubble-netaro { background-color: #FF99E4; color: #000; }
+
+/* Ілюстрації */
 .illustration {
   display: block;
   max-width: 100%;
@@ -158,191 +186,7 @@ header {
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
-/* Ten */
-.name-ten {
-  background-color: #c0c9d9;
-  color: #000;
-}
-.bubble-ten {
-  background-color: #E4EBF5;
-  color: #000;
-}
-
-/* Liguang */
-.name-liguang {
-  background-color: #cc6a5d;
-  color: #fff;
-}
-.bubble-liguang {
-  background-color: #FF998A;
-  color: #000;
-}
-
-/* Kiroku */
-.name-kiroku {
-  background-color: #9f7cc4;
-  color: #fff;
-}
-.bubble-kiroku {
-  background-color: #D7ADF3;
-  color: #000;
-}
-
-/* Nanaki */
-.name-nanaki {
-  background-color: #5fb8b1;
-  color: #fff;
-}
-.bubble-nanaki {
-  background-color: #9BE1DC;
-  color: #000;
-}
-
-/* Muneuji */
-.name-muneuji {
-  background-color: #e49cb8;
-  color: #000;
-}
-.bubble-muneuji {
-  background-color: #FFD2E9;
-  color: #000;
-}
-
-/* Raito */
-.name-raito {
-  background-color: #769e8d;
-  color: #fff;
-}
-.bubble-raito {
-  background-color: #A0C8B7;
-  color: #000;
-}
-
-/* Kinari */
-.name-kinari {
-  background-color: #d4b9e9;
-  color: #000;
-}
-.bubble-kinari {
-  background-color: #F5E4FF;
-  color: #000;
-}
-
-/* Chihiro */
-.name-chihiro {
-  background-color: #6ed6a7;
-  color: #000;
-}
-.bubble-chihiro {
-  background-color: #A3F5CD;
-  color: #000;
-}
-
-/* Tao */
-.name-tao {
-  background-color: #789dbc;
-  color: #fff;
-}
-.bubble-tao {
-  background-color: #ADCDE4;
-  color: #000;
-}
-
-/* Kuguri */
-.name-kuguri {
-  background-color: #c46e92;
-  color: #fff;
-}
-.bubble-kuguri {
-  background-color: #EE9BB7;
-  color: #000;
-}
-
-/* Nagi */
-.name-nagi {
-  background-color: #8784d1;
-  color: #fff;
-}
-.bubble-nagi {
-  background-color: #B9B7F5;
-  color: #000;
-}
-
-/* Toi */
-.name-toi {
-  background-color: #ccb86d;
-  color: #000;
-}
-.bubble-toi {
-  background-color: #FFEEB2;
-  color: #000;
-}
-
-/* Ryui */
-.name-ryui {
-  background-color: #e2758d;
-  color: #fff;
-}
-.bubble-ryui {
-  background-color: #FFA8BE;
-  color: #000;
-}
-
-/* Yodaka */
-.name-yodaka {
-  background-color: #c2be86;
-  color: #000;
-}
-.bubble-yodaka {
-  background-color: #F8F3D5;
-  color: #000;
-}
-
-/* Netaro */
-.name-netaro {
-  background-color: #dd70b7;
-  color: #fff;
-}
-.bubble-netaro {
-  background-color: #FF99E4;
-  color: #000;
-}
-
-
-/* Адаптивність: збільшуємо шрифт та елементи для мобільних */
-@media (max-width: 600px) {
-  html {
-    font-size: 18px;
-  }
-
-  body {
-    font-size: 1rem; /* вже залежить від html font-size */
-    line-height: 1.6;
-  }
-
-  header h1 {
-    font-size: 1.8rem;
-  }
-
-  header nav a {
-    font-size: 1.2rem;
-    padding: 0.5em 1em;
-  }
-
-  #theme-toggle {
-    font-size: 1.8rem;
-  }
-
-  .bubble {
-    max-width: 100%;
-    font-size: 1.1rem;
-  }
-
-  .avatar img {
-    width: 70px;
-  }
-}
-
+/* Проєкти */
 .project-card {
   border: 2px solid #ccc;
   border-radius: 12px;
@@ -380,46 +224,38 @@ header {
   font-size: 1em;
   color: var(--text);
 }
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
 
-.dropdown-toggle {
-  background-color: #555;
-  color: white;
-  padding: 8px 16px;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
-  border-radius: 6px;
-}
+/* Мобільна адаптивність */
+@media (max-width: 600px) {
+  html {
+    font-size: 18px;
+  }
 
-.dropdown-menu {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  border-radius: 6px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  z-index: 1;
+  body {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
 
-  right: 0;
-  left: auto;
+  header h1 {
+    font-size: 1.8rem;
+  }
 
-  max-height: 300px;
-  overflow-y: auto;
-}
+  header nav a {
+    font-size: 1.2rem;
+    padding: 0.5em 1em;
+  }
 
+  #theme-toggle {
+    font-size: 1.8rem;
+  }
 
-.dropdown-menu a {
-  color: black;
-  padding: 10px 14px;
-  text-decoration: none;
-  display: block;
-}
+  .bubble {
+    max-width: 100%;
+    font-size: 1.1rem;
+  }
 
-.dropdown-menu a:hover {
-  background-color: #eee;
+  .avatar img {
+    width: 70px;
+  }
 }
 
