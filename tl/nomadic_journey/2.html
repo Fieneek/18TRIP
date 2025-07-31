@@ -3,95 +3,31 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Кочова Подорож — Розділ 2</title>
+  <title>Пролог — Моє миле рідне місто</title>
   <link rel="stylesheet" href="../../css/style.css" />
 </head>
 <body>
   <header>
-    <h1>Кочова Подорож — Розділ 2</h1>
-
+    <h1>Пролог — Моє миле рідне місто</h1>
     <button id="theme-toggle">🌗</button>
-  </header>
-  <main>
-<style>
-  .dropdown-container {
-    position: relative;
-    display: inline-block;
-  }
 
-  .dropdown-toggle {
-    background-color: #f0f0f0;
-    border: none;
-    padding: 8px 16px;
-    cursor: pointer;
-    font-size: 16px;
-    border-radius: 6px;
-  }
-
-  .dropdown-menu {
-    display: none;
-    position: absolute;
-    top: 120%;
-    left: 0;
-    background-color: var(--bubble-bg, #ffffff);
-    min-width: 180px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    z-index: 999;
-    border-radius: 8px;
-    padding: 8px 0;
-  }
-
-  .dropdown-menu a {
-    display: block;
-    padding: 10px 16px;
-    text-decoration: none;
-    color: inherit;
-    transition: background 0.2s;
-  }
-
-  .dropdown-menu a:hover {
-    background-color: rgba(0, 0, 0, 0.05);
-  }
-</style>
-
-<div class="dropdown-container">
-  <button class="dropdown-toggle">Розділи</button>
-  <div id="chapterDropdown" class="dropdown-menu">
-    <a href="1_prologue.html">Розділ 1: Пролог</a>
-    <a href="2_something.html">Розділ 2</a>
-    <!-- додай ще -->
-  </div>
-</div>
-
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const toggleButton = document.querySelector('.dropdown-toggle');
-    const dropdownMenu = document.getElementById('chapterDropdown');
-
-    toggleButton.addEventListener('click', (e) => {
-      e.stopPropagation();
-      dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
-    });
-
-    document.addEventListener('click', (e) => {
-      if (!toggleButton.contains(e.target) && !dropdownMenu.contains(e.target)) {
-        dropdownMenu.style.display = 'none';
-      }
-    });
-  });
-</script>
-    
-<section class="dialogue">
-  <div class="avatar">
-    <img src="images/charas/renga.png" alt="Ренґа" />
-  </div>
-  <div class="text-block">
-    <span class="name name-renga">Ренґа</span>
-    <div class="bubble bubble-renga">
-<i>(Прямий переліт з Японії до Монголії зайняв десь 6 годин. Поки з вікна було видно неосяжну блакить, час промайнув геть швидко.)</i>
+    <div class="dropdown-container">
+      <button class="dropdown-toggle">Розділи ▾</button>
+      <div id="chapterDropdown" class="dropdown-menu">
+        <a href="1_prologue.html">Розділ 1</a>
+        <a href="2_prologue.html">Розділ 2</a>
+        <a href="3_prologue.html">Розділ 3</a>
+        <a href="4_prologue.html">Розділ 4</a>
+        <a href="5_prologue.html">Розділ 5</a>
+        <a href="6_prologue.html">Розділ 6</a>
+        <a href="7_prologue.html">Розділ 7</a>
+        <a href="8_prologue.html">Розділ 8</a>
+      </div>
     </div>
-  </div>
-</section>
+  </header>
+
+  <main>
+
 
      <p
       style="
