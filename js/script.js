@@ -1,57 +1,27 @@
-<style>
-  .dropdown-container {
-    position: relative;
-    display: inline-block;
+document.addEventListener('DOMContentLoaded', () => {
+  // Темна тема
+  const themeToggle = document.getElementById('theme-toggle');
+  const body = document.body;
+
+  // Зберігання обраної теми
+  if (localStorage.getItem('theme') === 'dark') {
+    body.classList.add('dark');
   }
 
-  .dropdown-toggle {
-    padding: 8px 16px;
-    background-color: #eee;
-    border: none;
-    cursor: pointer;
-    font-size: 1rem;
-    border-radius: 6px;
-  }
+  themeToggle?.addEventListener('click', () => {
+    body.classList.toggle('dark');
+    if (body.classList.contains('dark')) {
+      localStorage.setItem('theme', 'dark');
+    } else {
+      localStorage.setItem('theme', 'light');
+    }
+  });
 
-  #chapterDropdown {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: white;
-    border: 1px solid #ccc;
-    min-width: 160px;
-    z-index: 1000;
-    border-radius: 6px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
+  // Випадаючий список "Розділи"
+  const toggleButton = document.querySelector('.dropdown-toggle');
+  const dropdownMenu = document.getElementById('chapterDropdown');
 
-  #chapterDropdown a {
-    display: block;
-    padding: 10px;
-    color: black;
-    text-decoration: none;
-  }
-
-  #chapterDropdown a:hover {
-    background-color: #f0f0f0;
-  }
-</style>
-
-<div class="dropdown-container">
-  <button class="dropdown-toggle">Розділи</button>
-  <div id="chapterDropdown">
-    <a href="1_prologue.html">Розділ 1</a>
-    <a href="2_something.html">Розділ 2</a>
-    <!-- інші -->
-  </div>
-</div>
-
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const toggleButton = document.querySelector('.dropdown-toggle');
-    const dropdownMenu = document.getElementById('chapterDropdown');
-
+  if (toggleButton && dropdownMenu) {
     toggleButton.addEventListener('click', (e) => {
       e.stopPropagation();
       dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
@@ -62,6 +32,5 @@
         dropdownMenu.style.display = 'none';
       }
     });
-  });
-</script>
-
+  }
+});
