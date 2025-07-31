@@ -88,23 +88,23 @@ header {
 }
 
 /* Індивідуальні кольори імен */
-.name-kafka {
-  background-color: #9a87cc; /* темніший фіолетовий */
-  color: #fff;
-}
-
-.name-akuta {
-  background-color: #e08a50; /* темніший помаранчевий */
-  color: #fff;
-}
-
 .name-renga {
   background-color: #c2a858; /* темніший жовто-коричневий */
   color: #fff;
 }
 
+.name-kafka {
+  background-color: #9a87cc; /* темніший фіолетовий */
+  color: #fff;
+}
+
 .name-yukikaze {
   background-color: #5fb8dd; /* темніший блакитний */
+  color: #fff;
+}
+
+.name-akuta {
+  background-color: #e08a50; /* темніший помаранчевий */
   color: #fff;
 }
 
@@ -123,23 +123,23 @@ header {
 }
 
 /* Індивідуальні кольори бульбашок */
-.bubble-kafka {
-  background-color: #C8B7FF;
-  color: #000;
-}
-
-.bubble-akuta {
-  background-color: #FFC199;
-  color: #000;
-}
-
 .bubble-renga {
   background-color: #EED59E;
   color: #000;
 }
 
+.bubble-kafka {
+  background-color: #C8B7FF;
+  color: #000;
+}
+
 .bubble-yukikaze {
   background-color: #A3DFFF;
+  color: #000;
+}
+
+.bubble-akuta {
+  background-color: #FFC199;
   color: #000;
 }
 
@@ -157,6 +157,157 @@ header {
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
+
+/* Ten */
+.name-ten {
+  background-color: #c0c9d9;
+  color: #000;
+}
+.bubble-ten {
+  background-color: #E4EBF5;
+  color: #000;
+}
+
+/* Liguang */
+.name-liguang {
+  background-color: #cc6a5d;
+  color: #fff;
+}
+.bubble-liguang {
+  background-color: #FF998A;
+  color: #000;
+}
+
+/* Kiroku */
+.name-kiroku {
+  background-color: #9f7cc4;
+  color: #fff;
+}
+.bubble-kiroku {
+  background-color: #D7ADF3;
+  color: #000;
+}
+
+/* Nanaki */
+.name-nanaki {
+  background-color: #5fb8b1;
+  color: #fff;
+}
+.bubble-nanaki {
+  background-color: #9BE1DC;
+  color: #000;
+}
+
+/* Muneuji */
+.name-muneuji {
+  background-color: #e49cb8;
+  color: #000;
+}
+.bubble-muneuji {
+  background-color: #FFD2E9;
+  color: #000;
+}
+
+/* Raito */
+.name-raito {
+  background-color: #769e8d;
+  color: #fff;
+}
+.bubble-raito {
+  background-color: #A0C8B7;
+  color: #000;
+}
+
+/* Kinari */
+.name-kinari {
+  background-color: #d4b9e9;
+  color: #000;
+}
+.bubble-kinari {
+  background-color: #F5E4FF;
+  color: #000;
+}
+
+/* Chihiro */
+.name-chihiro {
+  background-color: #6ed6a7;
+  color: #000;
+}
+.bubble-chihiro {
+  background-color: #A3F5CD;
+  color: #000;
+}
+
+/* Tao */
+.name-tao {
+  background-color: #789dbc;
+  color: #fff;
+}
+.bubble-tao {
+  background-color: #ADCDE4;
+  color: #000;
+}
+
+/* Kuguri */
+.name-kuguri {
+  background-color: #c46e92;
+  color: #fff;
+}
+.bubble-kuguri {
+  background-color: #EE9BB7;
+  color: #000;
+}
+
+/* Nagi */
+.name-nagi {
+  background-color: #8784d1;
+  color: #fff;
+}
+.bubble-nagi {
+  background-color: #B9B7F5;
+  color: #000;
+}
+
+/* Toi */
+.name-toi {
+  background-color: #ccb86d;
+  color: #000;
+}
+.bubble-toi {
+  background-color: #FFEEB2;
+  color: #000;
+}
+
+/* Ryui */
+.name-ryui {
+  background-color: #e2758d;
+  color: #fff;
+}
+.bubble-ryui {
+  background-color: #FFA8BE;
+  color: #000;
+}
+
+/* Yodaka */
+.name-yodaka {
+  background-color: #c2be86;
+  color: #000;
+}
+.bubble-yodaka {
+  background-color: #F8F3D5;
+  color: #000;
+}
+
+/* Netaro */
+.name-netaro {
+  background-color: #dd70b7;
+  color: #fff;
+}
+.bubble-netaro {
+  background-color: #FF99E4;
+  color: #000;
+}
+
 
 /* Адаптивність: збільшуємо шрифт та елементи для мобільних */
 @media (max-width: 600px) {
