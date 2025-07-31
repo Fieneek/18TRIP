@@ -1,30 +1,27 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // Темна тема
-  const themeToggle = document.getElementById('theme-toggle');
-  const body = document.body;
+  // --- ТЕМА ---
+  const btn = document.getElementById('theme-toggle');
+  if (btn) {
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const current = localStorage.getItem('theme') || (prefersDark ? 'dark' : 'light');
+    document.documentElement.setAttribute('data-theme', current);
 
-  // Зберігання обраної теми
-  if (localStorage.getItem('theme') === 'dark') {
-    body.classList.add('dark');
+    btn.addEventListener('click', () => {
+      const newTheme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+    });
   }
 
-  themeToggle?.addEventListener('click', () => {
-    body.classList.toggle('dark');
-    if (body.classList.contains('dark')) {
-      localStorage.setItem('theme', 'dark');
-    } else {
-      localStorage.setItem('theme', 'light');
-    }
-  });
-
-  // Випадаючий список "Розділи"
+  // --- ВИПАДАЮЧЕ МЕНЮ РОЗДІЛІВ ---
   const toggleButton = document.querySelector('.dropdown-toggle');
   const dropdownMenu = document.getElementById('chapterDropdown');
 
   if (toggleButton && dropdownMenu) {
     toggleButton.addEventListener('click', (e) => {
       e.stopPropagation();
-      dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
+      const isVisible = dropdownMenu.style.display === 'block';
+      dropdownMenu.style.display = isVisible ? 'none' : 'block';
     });
 
     document.addEventListener('click', (e) => {
@@ -34,3 +31,4 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+
