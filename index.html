@@ -11,24 +11,45 @@
     <h1>Список перекладів</h1>
     <button id="theme-toggle">🌗</button>
   </header>
-  <main>
 
+  <main>
     <div class="project-card">
-  <a href="tl/prologue/start_prologue.html">
-    <img src="tl/prologue/images/scenes/prologue_cassette.jpeg" alt="Пролог" class="project-image" />
-    <h2 class="project-title">Пролог [Досі порожній]</h2>
-    <p class="project-description">Текст текст</p>
-  </a>
-</div>    
+      <a href="tl/prologue/start_prologue.html">
+        <img src="tl/prologue/images/scenes/prologue_cassette.jpeg" alt="Пролог" class="project-image" />
+        <h2 class="project-title">Пролог [Досі порожній]</h2>
+        <p class="project-description">Текст текст</p>
+      </a>
+    </div>    
     
     <div class="project-card">
-  <a href="tl/nomadic_journey/start.html">
-    <img src="tl/nomadic_journey/images/scenes/renga_nomadic.png" alt="Кочова Подорож" class="project-image" />
-    <h2 class="project-title">Кочова Подорож</h2>
-    <p class="project-description">У межах програми HAMA Tours Ренґа й Акута вирушили у навчальну подорож до Монголії. Вражені безкраїми степами, вони не втримались від дуркування з місцевими тваринами — і випадково загубили ґіда. Тепер їм доведеться заночувати просто неба. Чи зможуть вони повернутися з краю, де температура між днем і ніччю стрибає на 30 градусів?!</p>
-  </a>
-</div>
+      <a href="tl/nomadic_journey/start.html">
+        <img src="tl/nomadic_journey/images/scenes/renga_nomadic.png" alt="Кочова Подорож" class="project-image" />
+        <h2 class="project-title">Кочова Подорож</h2>
+        <p class="project-description">У межах програми HAMA Tours Ренґа й Акута вирушили у навчальну подорож до Монголії. Вражені безкраїми степами, вони не втримались від дуркування з місцевими тваринами — і випадково загубили ґіда. Тепер їм доведеться заночувати просто неба. Чи зможуть вони повернутися з краю, де температура між днем і ніччю стрибає на 30 градусів?!</p>
+      </a>
+    </div>
   </main>
-  <script src="js/script.js"></script>
+
+  <script>
+    // Зберігаємо тему в localStorage
+    const toggleButton = document.getElementById('theme-toggle');
+    const body = document.body;
+
+    function applySavedTheme() {
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme === 'dark') {
+        body.classList.add('dark-theme');
+      }
+    }
+
+    toggleButton.addEventListener('click', () => {
+      body.classList.toggle('dark-theme');
+      const isDark = body.classList.contains('dark-theme');
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    });
+
+    applySavedTheme();
+  </script>
 </body>
 </html>
+
