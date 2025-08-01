@@ -31,24 +31,23 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // --- ЗМЕНШЕННЯ ЗАГОЛОВКА ПРИ ПРОКРУТЦІ ---
+document.addEventListener('DOMContentLoaded', () => {
   let lastScrollTop = 0;
-  const header = document.querySelector('header');
+  const header = document.querySelector('.sticky-header');
 
   if (header) {
     window.addEventListener('scroll', () => {
       const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
 
-      if (currentScroll > lastScrollTop) {
-        // прокрутка вниз
-        header.classList.add('header-shrink');
+      if (currentScroll > lastScrollTop && currentScroll > 50) {
+        // прокрутка вниз і більше 50px від верху
+        header.classList.add('shrink');
       } else {
-        // прокрутка вгору
-        header.classList.remove('header-shrink');
+        // прокрутка вгору або близько до верху сторінки
+        header.classList.remove('shrink');
       }
 
       lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
     });
   }
 });
-
