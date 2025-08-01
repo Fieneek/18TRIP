@@ -14,22 +14,25 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // --- ВИПАДАЮЧЕ МЕНЮ РОЗДІЛІВ ---
-  const toggleButton = document.querySelector('.dropdown-toggle');
-  const dropdownMenu = document.getElementById('chapterDropdown');
+let lastScrollTop = 0;
+const header = document.getElementById('stickyHeader');
 
-  if (toggleButton && dropdownMenu) {
-    toggleButton.addEventListener('click', (e) => {
-      e.stopPropagation();
-      const isVisible = dropdownMenu.style.display === 'block';
-      dropdownMenu.style.display = isVisible ? 'none' : 'block';
-    });
+window.addEventListener('scroll', () => {
+  const currentScroll = window.scrollY || document.documentElement.scrollTop;
 
-    document.addEventListener('click', (e) => {
-      if (!toggleButton.contains(e.target) && !dropdownMenu.contains(e.target)) {
-        dropdownMenu.style.display = 'none';
-      }
-    });
+  if (!header) return;
+
+  if (currentScroll > lastScrollTop + 10) {
+    // Скрол вниз — зменшити
+    header.classList.add('shrunk');
+  } else if (currentScroll < lastScrollTop - 10) {
+    // Скрол вгору — повернути
+    header.classList.remove('shrunk');
   }
+
+  lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+});
+
 
   // --- НАВІГАЦІЯ РОЗДІЛАМИ ---
   const nav = document.getElementById('chapter-navigation');
