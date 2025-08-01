@@ -276,40 +276,38 @@ header {
   transition: width 0.1s linear;
 }
 
-/* Загальні стилі заголовка */
+/* Заголовок за замовчуванням */
 .sticky-header {
   position: sticky;
   top: 0;
   z-index: 999;
-  background-color: var(--header-bg, #fff);
-  color: var(--header-color, #000);
-  padding: 1em;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  background-color: var(--header-bg);
+  color: var(--header-text);
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  font-weight: bold;
   transition: all 0.3s ease;
-  backdrop-filter: blur(8px);
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Зменшена версія при скролі вниз */
+/* Зменшена версія */
 .sticky-header.shrink {
-  padding: 0.4em 1em;
-  font-size: 0.85em;
-  opacity: 0.9;
+  padding: 0.3rem 1rem;
+  font-size: 1rem;
 }
 
-/* Темна тема */
-[data-theme='dark'] .sticky-header {
-  --header-bg: rgba(0, 0, 0, 0.7);
-  --header-color: #fff;
+/* Теми */
+:root {
+  --header-bg: #ffffffcc;
+  --header-text: #222;
 }
 
-/* Світла тема */
-[data-theme='light'] .sticky-header {
-  --header-bg: rgba(255, 255, 255, 0.8);
-  --header-color: #000;
+[data-theme="dark"] {
+  --header-bg: #121212cc;
+  --header-text: #f5f5f5;
 }
+
 
 
 /* Навігація */
