@@ -281,17 +281,20 @@ header {
   background: #6aa1ff;
   transition: width 0.1s linear;
 }
-
 .sticky-header {
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
   padding: 1rem 1.5rem;
   font-size: 1.5rem;
-  background-color: var(--header-bg);
-  color: var(--header-text);
+  font-weight: bold;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   transition: opacity 0.3s ease;
-  z-index: 999;
+  z-index: 1000;
 }
+
 
 .sticky-header.shrink {
   padding: 0.3rem 1.5rem;
