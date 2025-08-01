@@ -276,14 +276,23 @@ header {
   transition: width 0.1s linear;
 }
 
-/* Прилипаючий заголовок */
 .sticky-header {
   position: sticky;
-  top: 4px; /* щоб не перекривало прогрес-бар */
-  background: var(--bg-color, white);
-  z-index: 998;
-  padding: 1rem;
+  top: 0;
+  z-index: 999;
+  background: var(--bg-color);
+  transition: all 0.3s ease;
+  padding: 1em;
+  font-size: 1.2em;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.sticky-header.shrunk {
+  padding: 0.3em 1em;
+  font-size: 0.9em;
+  opacity: 0.9;
+}
+
 }
 
 /* Навігація */
