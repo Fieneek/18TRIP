@@ -10,7 +10,15 @@
   <header>
     <h1>Пролог — Моє миле рідне місто</h1>
     <button id="theme-toggle">🌗</button>
-
+    
+ <!-- Прогрес-бар -->
+  <div class="progress-bar-container">
+    <div class="progress-bar"></div>
+  </div>
+     <header class="sticky-header">
+    <h1>Кочова Подорож — Розділ 1</h1>
+  </header>
+    
     <div class="dropdown-container">
       <button class="dropdown-toggle">Розділи ▾</button>
       <div id="chapterDropdown" class="dropdown-menu">
@@ -214,5 +222,14 @@
     
   </main>
   <script src="../../js/script.js"></script>
+    <script>
+    document.addEventListener('scroll', () => {
+      const progress = document.querySelector('.progress-bar');
+      const scrollTop = window.scrollY;
+      const docHeight = document.body.scrollHeight - window.innerHeight;
+      const scrollPercent = (scrollTop / docHeight) * 100;
+      progress.style.width = scrollPercent + '%';
+    });
+  </script>
 </body>
 </html>
