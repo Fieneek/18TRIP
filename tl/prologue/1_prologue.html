@@ -7,17 +7,16 @@
   <link rel="stylesheet" href="../../css/style.css" />
 </head>
 <body>
-  <header>
-    <h1>Пролог — Моє миле рідне місто</h1>
-    <button id="theme-toggle">🌗</button>
-    
- <!-- Прогрес-бар -->
+
+  <!-- Прогрес-бар -->
   <div class="progress-bar-container">
     <div class="progress-bar"></div>
   </div>
-     <header class="sticky-header">
+
+  <!-- Прилиплий заголовок -->
+  <header class="sticky-header">
     <h1>Кочова Подорож — Розділ 1</h1>
-  </header>
+    <button id="theme-toggle">🌗</button>
     
     <div class="dropdown-container">
       <button class="dropdown-toggle">Розділи ▾</button>
@@ -215,14 +214,16 @@
   </div>
 </section>
     
-  <footer class="chapter-nav">
-  <span class="chapter-status">Глава 1 / 8</span>
-  <a href="2_prologue.html" class="nav-button">Наступний →</a>
-  </footer>
-    
+   <footer class="chapter-nav">
+      <span class="chapter-status">Глава 1 / 8</span>
+      <a href="2_prologue.html" class="nav-button">Наступний →</a>
+    </footer>
   </main>
+
+  <!-- Підключення скриптів -->
   <script src="../../js/script.js"></script>
-    <script>
+  <script>
+    // Прогрес-бар
     document.addEventListener('scroll', () => {
       const progress = document.querySelector('.progress-bar');
       const scrollTop = window.scrollY;
@@ -230,6 +231,12 @@
       const scrollPercent = (scrollTop / docHeight) * 100;
       progress.style.width = scrollPercent + '%';
     });
+
+    // Поточний розділ
+    const currentChapter = 1;
+    const totalChapters = 8;
+    const prevLink = null;
+    const nextLink = "2_prologue.html";
   </script>
 </body>
 </html>
