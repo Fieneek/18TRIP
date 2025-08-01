@@ -14,24 +14,25 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // --- ВИПАДАЮЧЕ МЕНЮ РОЗДІЛІВ ---
-let lastScrollTop = 0;
-const header = document.getElementById('stickyHeader');
+let lastScroll = 0;
+const header = document.querySelector('.chapter-title');
 
 window.addEventListener('scroll', () => {
-  const currentScroll = window.scrollY || document.documentElement.scrollTop;
+  const currentScroll = window.scrollY;
 
   if (!header) return;
 
-  if (currentScroll > lastScrollTop + 10) {
-    // Скрол вниз — зменшити
+  if (currentScroll > lastScroll + 10) {
+    // Скрол вниз — стискаємо
     header.classList.add('shrunk');
-  } else if (currentScroll < lastScrollTop - 10) {
-    // Скрол вгору — повернути
+  } else if (currentScroll < lastScroll - 10) {
+    // Скрол вгору — повертаємо розмір
     header.classList.remove('shrunk');
   }
 
-  lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+  lastScroll = currentScroll <= 0 ? 0 : currentScroll;
 });
+
 
 
   // --- НАВІГАЦІЯ РОЗДІЛАМИ ---
