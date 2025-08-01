@@ -289,7 +289,7 @@ header {
   font-size: 1.5rem;
   background-color: var(--header-bg);
   color: var(--header-text);
-  transition: all 0.3s ease;
+  transition: opacity 0.3s ease;
   z-index: 999;
 }
 
