@@ -520,14 +520,29 @@
     >
 *У цьому уривку Ренґа й Акута мають на увазі “куди оком не глянь”, але обидвоє плутаються. Ренґа називає випадкові вирази, які близькі до оригіналу.    </p>
 
-  <footer class="chapter-nav">
-  <a href="1.html" class="nav-button">← Попередній</a>
-  <span class="chapter-status">Глава 2 / 6</span>
-  <a href="3.html" class="nav-button">Наступний →</a>
-  </footer>
-
-    
+   <footer class="chapter-nav">
+      <span class="chapter-status">Розділ 1 / 8</span>
+      <a href="2_prologue.html" class="nav-button">Наступний →</a>
+    </footer>
   </main>
+
+  <!-- Підключення скриптів -->
   <script src="../../js/script.js"></script>
+  <script>
+    // Прогрес-бар
+    document.addEventListener('scroll', () => {
+      const progress = document.querySelector('.progress-bar');
+      const scrollTop = window.scrollY;
+      const docHeight = document.body.scrollHeight - window.innerHeight;
+      const scrollPercent = (scrollTop / docHeight) * 100;
+      progress.style.width = scrollPercent + '%';
+    });
+
+    // Поточний розділ
+    const currentChapter = 1;
+    const totalChapters = 8;
+    const prevLink = null;
+    const nextLink = "2_prologue.html";
+  </script>
 </body>
 </html>
