@@ -276,25 +276,25 @@ header {
   transition: width 0.1s linear;
 }
 
-/* Заголовок за замовчуванням */
+/* Заголовок */
 .sticky-header {
   position: sticky;
   top: 0;
-  z-index: 999;
-  background-color: var(--header-bg);
-  color: var(--header-text);
-  padding: 1rem 2rem;
+  background-color: var(--header-bg, #ffffff);
+  color: var(--header-text, #000000);
+  padding: 1rem 1.5rem;
   font-size: 1.5rem;
   font-weight: bold;
+  z-index: 1000;
   transition: all 0.3s ease;
-  backdrop-filter: blur(10px);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-/* Зменшена версія */
+/* Зменшений заголовок */
 .sticky-header.shrink {
-  padding: 0.3rem 1rem;
+  padding: 0.3rem 1.5rem;
   font-size: 1rem;
+  opacity: 0.7;
 }
 
 /* Теми */
