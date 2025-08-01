@@ -14,22 +14,24 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // --- ВИПАДАЮЧЕ МЕНЮ РОЗДІЛІВ ---
-let lastScroll = 0;
-const header = document.querySelector('.chapter-title');
+  // --- ЗМЕНШЕННЯ ЗАГОЛОВКА ПРИ СКРОЛІ ---
+  let lastScroll = 0;
+  const header = document.getElementById('main-header');
 
-window.addEventListener('scroll', () => {
-  const currentScroll = window.scrollY;
+  if (header) {
+    window.addEventListener('scroll', () => {
+      const currentScroll = window.scrollY;
 
-  if (!header) return;
+      if (currentScroll > lastScroll && currentScroll > 50) {
+        header.classList.add('shrunk');
+      } else if (currentScroll < lastScroll) {
+        header.classList.remove('shrunk');
+      }
 
-  if (currentScroll > lastScroll + 10) {
-    header.classList.add('hidden'); // вниз — ховати
-  } else if (currentScroll < lastScroll - 10) {
-    header.classList.remove('hidden'); // вгору — показати
+      lastScroll = currentScroll;
+    });
   }
 
-  lastScroll = currentScroll <= 0 ? 0 : currentScroll;
-});
 
 
 
