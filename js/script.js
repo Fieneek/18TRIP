@@ -23,15 +23,14 @@ window.addEventListener('scroll', () => {
   if (!header) return;
 
   if (currentScroll > lastScroll + 10) {
-    // Скрол вниз — стискаємо
-    header.classList.add('shrunk');
+    header.classList.add('hidden'); // вниз — ховати
   } else if (currentScroll < lastScroll - 10) {
-    // Скрол вгору — повертаємо розмір
-    header.classList.remove('shrunk');
+    header.classList.remove('hidden'); // вгору — показати
   }
 
   lastScroll = currentScroll <= 0 ? 0 : currentScroll;
 });
+
 
 
 
