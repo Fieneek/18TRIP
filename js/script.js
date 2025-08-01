@@ -30,27 +30,24 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
-
 document.addEventListener('DOMContentLoaded', () => {
-  let lastScrollTop = 0;
   const header = document.querySelector('.sticky-header');
+  let lastScroll = 0;
 
-  if (header) {
-    window.addEventListener('scroll', () => {
-      const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+  window.addEventListener('scroll', () => {
+    const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
 
-      if (currentScroll > lastScrollTop && currentScroll > 50) {
-        // Прокрутка вниз — ховаємо заголовок
-        header.style.opacity = '0';
-        header.style.pointerEvents = 'none';  // щоб не блокував кліки
-        header.style.transition = 'opacity 0.3s ease';
-      } else {
-        // Прокрутка вгору — показуємо заголовок
-        header.style.opacity = '1';
-        header.style.pointerEvents = 'auto';
-      }
+    if (currentScroll > lastScroll && currentScroll > 50) {
+      // Скрол вниз — ховаємо
+      header.style.opacity = '0';
+      header.style.pointerEvents = 'none';
+    } else {
+      // Скрол вгору — показуємо
+      header.style.opacity = '1';
+      header.style.pointerEvents = 'auto';
+    }
 
-      lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
-    });
-  }
+    lastScroll = currentScroll <= 0 ? 0 : currentScroll;
+  });
 });
+
