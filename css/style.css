@@ -17,6 +17,9 @@
   --header-bg: #121212cc;
   --header-text: #f5f5f5;
 }
+main {
+  padding-top: 4.5rem; /* або трохи менше, залежно від висоти банера */
+}
 
 body {
   background-color: var(--bg);
