@@ -95,12 +95,15 @@ const header = document.querySelector('.sticky-header');
 window.addEventListener('scroll', () => {
   const currentScrollY = window.scrollY;
 
-  if (currentScrollY > lastScrollY) {
+  if (currentScrollY > lastScrollY && currentScrollY > 50) {
+    // Прокручуємо вниз — зменшити плашку
     header.classList.add('shrink');
   } else {
+    // Прокручуємо вгору — повернути нормальний розмір
     header.classList.remove('shrink');
   }
 
   lastScrollY = currentScrollY;
 });
+
 
