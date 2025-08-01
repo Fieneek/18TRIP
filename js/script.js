@@ -89,4 +89,18 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
+let lastScrollY = window.scrollY;
+const header = document.querySelector('.sticky-header');
+
+window.addEventListener('scroll', () => {
+  const currentScrollY = window.scrollY;
+
+  if (currentScrollY > lastScrollY) {
+    header.classList.add('shrink');
+  } else {
+    header.classList.remove('shrink');
+  }
+
+  lastScrollY = currentScrollY;
+});
 
