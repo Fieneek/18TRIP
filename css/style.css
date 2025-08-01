@@ -286,7 +286,8 @@ header {
   top: 0;
   left: 0;
   right: 0;
-  background: #fff;
+  background: var(--header-bg);
+  color: var(--header-text);
   padding: 1rem 1.5rem;
   font-size: 1.5rem;
   font-weight: bold;
