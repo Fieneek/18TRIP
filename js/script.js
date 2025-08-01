@@ -30,26 +30,32 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
-// --- ЗМЕНШЕННЯ/СХОВУВАННЯ ЗАГОЛОВКА ПРИ ПРОКРУТЦІ ---
 document.addEventListener('DOMContentLoaded', () => {
-  let lastScrollTop = 0;
   const header = document.querySelector('.sticky-header');
+  let lastScroll = 0;
 
-  if (header) {
-    window.addEventListener('scroll', () => {
-      const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+  if (!header) return;
 
-      if (currentScroll > lastScrollTop + 10) {
-        // Прокрутка вниз — сховати плашку
-        header.classList.add('header-hidden');
-      } else if (currentScroll < lastScrollTop - 10) {
-        // Прокрутка вгору — показати плашку
-        header.classList.remove('header-hidden');
-      }
+  window.addEventListener('scroll', () => {
+    const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
 
-      lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
-    });
-  }
+    // Додай shrink, якщо проскролено хоча б трохи
+    if (currentScroll > 10) {
+      header.classList.add('shrink');
+    } else {
+      header.classList.remove('shrink');
+    }
+
+    // Ховай header при прокрутці вниз, показуй — вгору
+    if (currentScroll > lastScroll && currentScroll > 50) {
+      header.classList.add('hidden');
+    } else {
+      header.classList.remove('hidden');
+    }
+
+    lastScroll = currentScroll <= 0 ? 0 : currentScroll;
+  });
 });
+
 
 
