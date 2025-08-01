@@ -14,23 +14,37 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // --- ВИПАДАЮЧЕ МЕНЮ РОЗДІЛІВ ---
-  // --- ЗМЕНШЕННЯ ЗАГОЛОВКА ПРИ СКРОЛІ ---
-  let lastScroll = 0;
-  const header = document.getElementById('main-header');
+  const toggleButton = document.querySelector('.dropdown-toggle');
+  const dropdownMenu = document.getElementById('chapterDropdown');
 
-  if (header) {
-    window.addEventListener('scroll', () => {
-      const currentScroll = window.scrollY;
+  if (toggleButton && dropdownMenu) {
+    toggleButton.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const isVisible = dropdownMenu.style.display === 'block';
+      dropdownMenu.style.display = isVisible ? 'none' : 'block';
+    });
 
-      if (currentScroll > lastScroll && currentScroll > 50) {
-        header.classList.add('shrunk');
-      } else if (currentScroll < lastScroll) {
-        header.classList.remove('shrunk');
+    document.addEventListener('click', (e) => {
+      if (!toggleButton.contains(e.target) && !dropdownMenu.contains(e.target)) {
+        dropdownMenu.style.display = 'none';
       }
-
-      lastScroll = currentScroll;
     });
   }
+
+  // --- ЗМЕНШЕННЯ ЗАГОЛОВКА ПРИ СКРОЛІ ---
+  const header = document.getElementById('stickyHeader');
+  let lastScroll = window.scrollY;
+
+  window.addEventListener('scroll', () => {
+    const currentScroll = window.scrollY;
+    if (currentScroll > lastScroll && currentScroll > 50) {
+      header.classList.add('shrink');
+    } else {
+      header.classList.remove('shrink');
+    }
+    lastScroll = currentScroll;
+  });
+});
 
 
 
