@@ -40,11 +40,14 @@ document.addEventListener('DOMContentLoaded', () => {
       const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
 
       if (currentScroll > lastScrollTop && currentScroll > 50) {
-        // прокрутка вниз і більше 50px від верху
-        header.classList.add('shrink');
+        // Прокрутка вниз — ховаємо заголовок
+        header.style.opacity = '0';
+        header.style.pointerEvents = 'none';  // щоб не блокував кліки
+        header.style.transition = 'opacity 0.3s ease';
       } else {
-        // прокрутка вгору або близько до верху сторінки
-        header.classList.remove('shrink');
+        // Прокрутка вгору — показуємо заголовок
+        header.style.opacity = '1';
+        header.style.pointerEvents = 'auto';
       }
 
       lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
