@@ -259,3 +259,54 @@ header {
   }
 }
 
+/* Прогрес-бар */
+.progress-bar-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 4px;
+  width: 100%;
+  background: #e0e0e0;
+  z-index: 999;
+}
+.progress-bar {
+  height: 100%;
+  width: 0;
+  background: #6aa1ff;
+  transition: width 0.1s linear;
+}
+
+/* Прилипаючий заголовок */
+.sticky-header {
+  position: sticky;
+  top: 4px; /* щоб не перекривало прогрес-бар */
+  background: var(--bg-color, white);
+  z-index: 998;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Навігація */
+.chapter-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 3rem;
+  padding: 1rem;
+  border-top: 1px solid #ccc;
+  font-size: 1rem;
+}
+.nav-button {
+  padding: 0.5rem 1rem;
+  background: #eaeaea;
+  border-radius: 6px;
+  text-decoration: none;
+  color: black;
+}
+.nav-button:hover {
+  background: #d5d5d5;
+}
+.chapter-status {
+  font-weight: bold;
+}
+
