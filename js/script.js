@@ -30,32 +30,28 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
-document.addEventListener('DOMContentLoaded', () => {
+
+  // --- ПОВЕДІНКА ХЕДЕРА ---
   const header = document.querySelector('.sticky-header');
   let lastScroll = 0;
 
-  if (!header) return;
+  if (header) {
+    window.addEventListener('scroll', () => {
+      const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
 
-  window.addEventListener('scroll', () => {
-    const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+      if (currentScroll > 10) {
+        header.classList.add('shrink');
+      } else {
+        header.classList.remove('shrink');
+      }
 
-    // Додай shrink, якщо проскролено хоча б трохи
-    if (currentScroll > 10) {
-      header.classList.add('shrink');
-    } else {
-      header.classList.remove('shrink');
-    }
+      if (currentScroll > lastScroll && currentScroll > 50) {
+        header.classList.add('hidden');
+      } else {
+        header.classList.remove('hidden');
+      }
 
-    // Ховай header при прокрутці вниз, показуй — вгору
-    if (currentScroll > lastScroll && currentScroll > 50) {
-      header.classList.add('hidden');
-    } else {
-      header.classList.remove('hidden');
-    }
-
-    lastScroll = currentScroll <= 0 ? 0 : currentScroll;
-  });
+      lastScroll = Math.max(currentScroll, 0);
+    });
+  }
 });
-
-
-
