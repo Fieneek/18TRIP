@@ -30,5 +30,44 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
+
+  // --- НАВІГАЦІЯ РОЗДІЛАМИ ---
+  const nav = document.getElementById('chapter-navigation');
+  if (nav) {
+    const currentIndex = parseInt(nav.dataset.index, 10);
+    const total = parseInt(nav.dataset.total, 10);
+
+    const prev = nav.querySelector('.prev-chapter');
+    const next = nav.querySelector('.next-chapter');
+    const info = nav.querySelector('.chapter-info');
+
+    if (prev && currentIndex > 1) {
+      prev.href = `chapter${currentIndex - 1}.html`;
+    } else {
+      prev.style.visibility = 'hidden';
+    }
+
+    if (next && currentIndex < total) {
+      next.href = `chapter${currentIndex + 1}.html`;
+    } else {
+      next.style.visibility = 'hidden';
+    }
+
+    if (info) {
+      info.textContent = `Глава ${currentIndex} / ${total}`;
+    }
+  }
+
+  // --- ПРОГРЕС ЛІНІЯ ---
+  const progress = document.getElementById('progress-bar');
+  if (progress) {
+    document.addEventListener('scroll', () => {
+      const scrollTop = window.scrollY;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const percent = (scrollTop / docHeight) * 100;
+      progress.style.width = `${percent}%`;
+    });
+  }
 });
+
 
