@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Пролог — Флорист</title>
+  <link rel="stylesheet" href="../../css/style.css" />
+</head>
+<body>
+
+  <!-- Прогрес-бар -->
+  <div class="progress-bar-container">
+    <div class="progress-bar"></div>
+  </div>
+
+<header class="sticky-header">
+  <div class="header-title">Пролог - 5</div>
+
+  <button id="theme-toggle">🌗</button>
+
+  <div class="dropdown-container">
+    <button class="dropdown-toggle">Розділи ▾</button>
+    <div id="chapterDropdown" class="dropdown-menu">
+      <a href="1_prologue.html">Розділ 1</a>
+      <a href="2_prologue.html">Розділ 2</a>
+      <a href="3_prologue.html">Розділ 3</a>
+      <a href="4_prologue.html">Розділ 4</a>
+      <a href="5_prologue.html">Розділ 5</a>
+      <a href="6_prologue.html">Розділ 6</a>
+      <a href="7_prologue.html">Розділ 7</a>
+      <a href="8_prologue.html">Розділ 8</a>
+    </div>
+  </div>
+</header>
+
+  <main>
+
+<section class="dialogue">
+  <div class="text-block">
+    <div class="bubble bubble-kafka">
+1 Липня. Я сьогодні втік з лікарні. Я вирушаю у першу подорож... Каеде взяв мене, як і обіцяв. Я дуже схвильований... Цікаво, чи відчує це Каеде, коли візьме мене за руку. Це все, про що я можу думати зараз. Я не забуду цей день до кінця свого життя. Все, що я побачив, все, що я їв, усіх, кого зустрів... Усі запахи, звуки, кольори... І я ніколи не забуду, якою теплою була рука Каеде. Вирушаючи у подорож, можна відчути так багато всього. Тож я вирішив. Одного дня... Як мер 0 району, я зроблю все, щоб кожен, хто відвідував НАМА, відчув нашу гостинність.
+    </div>
+  </div>
+</section>
+
+    <p
+      style="
+        text-align: center;
+        margin: 2em 0;
+        font-style: italic;
+        color: #666;
+      "
+    >
+— Лікарня Оґуро - Палата —
+    </p>
+    
+<section class="dialogue">
+  <div class="avatar">
+    <img src="/18TRIP/tl/prologue/images/charas/mc_conductors/kaede.png" alt="Каеде">
+  </div>
+  <div class="text-block">
+    <span class="name name-kaede">Каеде</span>
+    <div class="bubble bubble-kaede">
+Я знав це... Це запис з того дня, коли я допоміг Кафці втекти з лікарні, і ми разом досліджували НАМА. <i>(Кафка... Цей день реально багато значить для нього.)</i>
+    </div>
+  </div>
+</section>
+
+
+<footer class="chapter-nav">
+      <span class="chapter-status">Розділ 3 / 8</span>
+      <a href="4_prologue.html" class="nav-button">← Минулий</a>
+      <a href="6_prologue.html" class="nav-button">Наступний →</a>
+    </footer>
+  </main>
+
+  <!-- Підключення скриптів -->
+  <script src="../../js/script.js"></script>
+  <script>
+    // Прогрес-бар
+    document.addEventListener('scroll', () => {
+      const progress = document.querySelector('.progress-bar');
+      const scrollTop = window.scrollY;
+      const docHeight = document.body.scrollHeight - window.innerHeight;
+      const scrollPercent = (scrollTop / docHeight) * 100;
+      progress.style.width = scrollPercent + '%';
+    });
+
+    // Поточний розділ
+    const currentChapter = 5;
+    const totalChapters = 8;
+    const prevLink = "4_prologue.html";
+    const nextLink = "6_prologue.html";
+  </script>
+</body>
+</html>
