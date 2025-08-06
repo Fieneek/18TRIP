@@ -184,6 +184,10 @@ header {
 .name-netaro { background-color: #dd70b7; color: #fff; }
 .bubble-netaro { background-color: #FF99E4; color: #000; }
 
+.name-renga-akuta { background-color: #C397C1; color: #000; }
+.bubble-renga-akuta { background-color: #DCB0DA; color: #000; }
+
+
 /* Ілюстрації */
 .illustration {
   display: block;
