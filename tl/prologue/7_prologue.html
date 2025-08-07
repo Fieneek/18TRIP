@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Пролог — Подорож у наших спогадах</title>
+  <link rel="stylesheet" href="../../css/style.css" />
+</head>
+<body>
+
+  <!-- Прогрес-бар -->
+  <div class="progress-bar-container">
+    <div class="progress-bar"></div>
+  </div>
+
+<header class="sticky-header">
+  <div class="header-title">Пролог - 7</div>
+
+  <button id="theme-toggle">🌗</button>
+
+  <div class="dropdown-container">
+    <button class="dropdown-toggle">Розділи ▾</button>
+    <div id="chapterDropdown" class="dropdown-menu">
+      <a href="1_prologue.html">Розділ 1</a>
+      <a href="2_prologue.html">Розділ 2</a>
+      <a href="3_prologue.html">Розділ 3</a>
+      <a href="4_prologue.html">Розділ 4</a>
+      <a href="5_prologue.html">Розділ 5</a>
+      <a href="6_prologue.html">Розділ 6</a>
+      <a href="7_prologue.html">Розділ 7</a>
+      <a href="8_prologue.html">Розділ 8</a>
+    </div>
+  </div>
+</header>
+
+  <main>
+    
+    <p
+      style="
+        text-align: center;
+        margin: 2em 0;
+        font-style: italic;
+        color: #666;
+      "
+    >
+	— Пам'ятна Плаза - Перший поверх —
+    </p>
+
+<section class="dialogue">
+  <div class="avatar">
+    <img src="/18TRIP/tl/prologue/images/charas/day2/akuta.png" alt="Акута">
+  </div>
+  <div class="text-block">
+    <span class="name name-akuta">Хлопець з пов'язкою</span>
+    <div class="bubble bubble-akuta">
+Але... Якщо я зможу піднятися на оглядову вже як і ти, я б міг зняти неперевершені сюжети! Боже, я про це тільки і мрію!
+    </div>
+  </div>
+</section>
+    
+<section class="dialogue">
+  <div class="avatar">
+    <img src="/18TRIP/tl/prologue/images/charas/mc_conductors/kaede.png" alt="Каеде">
+  </div>
+  <div class="text-block">
+    <span class="name name-kaede">Каеде</span>
+    <div class="bubble bubble-kaede">
+Ти ніколи не був у небесному саду?
+    </div>
+  </div>
+</section>
+
+
+footer class="chapter-nav">
+      <span class="chapter-status">Розділ 6 / 8</span>
+      <a href="5_prologue.html" class="nav-button">← Минулий</a>
+      <a href="7_prologue.html" class="nav-button">Наступний →</a>
+    </footer>
+  </main>
+
+  <!-- Підключення скриптів -->
+  <script src="../../js/script.js"></script>
+  <script>
+    // Прогрес-бар
+    document.addEventListener('scroll', () => {
+      const progress = document.querySelector('.progress-bar');
+      const scrollTop = window.scrollY;
+      const docHeight = document.body.scrollHeight - window.innerHeight;
+      const scrollPercent = (scrollTop / docHeight) * 100;
+      progress.style.width = scrollPercent + '%';
+    });
+
+    // Поточний розділ
+    const currentChapter = 6;
+    const totalChapters = 8;
+    const prevLink = "5_prologue.html";
+    const nextLink = "7_prologue.html";
+  </script>
+</body>
+</html>
