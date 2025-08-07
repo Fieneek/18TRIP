@@ -123,6 +123,10 @@ header {
 }
 
 /* Персонажі — Ім’я + Бульбашка */
+
+.name-kaede { background-color: #A5D762; color: #fff; }
+.bubble-kaede { background-color: #C3FF80; color: #000; }
+
 .name-renga { background-color: #c2a858; color: #fff; }
 .bubble-renga { background-color: #EED59E; color: #000; }
 
