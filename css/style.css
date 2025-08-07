@@ -192,6 +192,19 @@ header {
 .bubble-renga-akuta { background-color: #f6cb9c; color: #000; }
 
 
+.name-yachiyo { background-color: #BDCCC3; color: #000; }
+.bubble-yachiyo { background-color: #E5EAE1; color: #000; }
+
+.name-sakujiro { background-color: #BDCCC3; color: #000; }
+.bubble-sakujiro { background-color: #E5EAE1; color: #000; }
+
+.name-nayuki { background-color: #BDCCC3; color: #000; }
+.bubble-nayuki { background-color: #E5EAE1; color: #000; }
+
+.name-daniel { background-color: #BDCCC3; color: #000; }
+.bubble-daniel { background-color: #E5EAE1; color: #000; }
+
+
 /* Ілюстрації */
 .illustration {
   display: block;
