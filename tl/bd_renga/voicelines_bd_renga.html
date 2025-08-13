@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Той колір, що квітне у серці моєму — 2</title>
+  <link rel="stylesheet" href="../../css/style.css" />
+</head>
+<body>
+
+  <!-- Прогрес-бар -->
+  <div class="progress-bar-container">
+    <div class="progress-bar"></div>
+  </div>
+
+<header class="sticky-header">
+  <div class="header-title">Той колір, що квітне у серці моєму - 2</div>
+
+  <button id="theme-toggle">🌗</button>
+
+  <div class="dropdown-container">
+    <button class="dropdown-toggle">Розділи ▾</button>
+    <div id="chapterDropdown" class="dropdown-menu">
+  	<a href="special_bd_renga.html">Вітання</a>
+        <a href="1_story_bd_renga.html">Той колір, що квітне у серці моєму 1</a>
+      	<a href="2_story_bd_renga.html">Той колір, що квітне у серці моєму 2</a>
+     	<a href="voicelines_bd_renga.html">Войслайни</a>
+    </div>
+  </div>
+</header>
+
+  <main>
+
+<section class="dialogue">
+  <div class="avatar">
+    <img src="/18TRIP/tl/prologue/images/charas/mc_conductors/yachiyo.png" alt="Ячійо">
+  </div>
+  <div class="text-block">
+    <span class="name name-yachiyo">Ячійо</span>
+    <div class="bubble bubble-yachiyo">
+Вдииииииих, хааааа~~~... Це надто висококласне повітря, простолюдинам ним не можна дихати... І усюди, куди не глянь, квіти... Це рай?
+    </div>
+  </div>
+</section>
+
+<section class="dialogue">
+  <div class="avatar">
+    <img src="/18TRIP/tl/prologue/images/charas/r1ze/kafka.png" alt="Кафка" />
+  </div>
+  <div class="text-block">
+    <span class="name name-kafka">Кафка</span>
+    <div class="bubble bubble-kafka">
+Ось яка ДН-зона Ренґи... Це геть дивовижний трояндовий сад, правда, шефе?
+    </div>
+  </div>
+</section>
+
+
+       <footer class="chapter-nav">
+      <span class="chapter-status">Розділ 3 / 4</span>
+      <a href="1_story_bd_renga.html" class="nav-button">← Минулий</a>
+      <a href="voicelines_bd_renga.html" class="nav-button">Наступний →</a>
+    </footer>
+  </main>
+
+  <!-- Підключення скриптів -->
+  <script src="../../js/script.js"></script>
+  <script>
+    // Прогрес-бар
+    document.addEventListener('scroll', () => {
+      const progress = document.querySelector('.progress-bar');
+      const scrollTop = window.scrollY;
+      const docHeight = document.body.scrollHeight - window.innerHeight;
+      const scrollPercent = (scrollTop / docHeight) * 100;
+      progress.style.width = scrollPercent + '%';
+    });
+
+    // Поточний розділ
+    const currentChapter = 3;
+    const totalChapters = 4;
+    const prevLink = "1_story_bd_renga.html";
+    const nextLink = "voicelines_bd_renga.html";
+  </script>
+</body>
+</html>
