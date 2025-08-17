@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Кочова Подорож — Розділ Епілог</title>
+  <link rel="stylesheet" href="../../css/style.css" />
+</head>
+<body>
+
+  <!-- Прогрес-бар -->
+  <div class="progress-bar-container">
+    <div class="progress-bar"></div>
+  </div>
+
+<header class="sticky-header">
+  <div class="header-title">Кочова Подорож - Епілог</div>
+
+  <button id="theme-toggle">🌗</button>
+
+  <div class="dropdown-container">
+    <button class="dropdown-toggle">Розділи ▾</button>
+    <div id="chapterDropdown" class="dropdown-menu">
+      <a href="1.html">Розділ 1</a>
+      <a href="2.html">Розділ 2</a>
+      <a href="3.html">Розділ 3</a>
+      <a href="4.html">Розділ 4</a>
+      <a href="5.html">Розділ 5</a>
+    </div>
+  </div>
+</header>
+
+  <main>
+
+  <img class="illustration" src="images/scenes/IMG_4727.PNG" />
+    
+     <p
+      style="
+        text-align: center;
+        margin: 2em 0;
+        font-style: italic;
+        color: #666;
+      "
+    >
+— Дім HAMA - Вітальня —
+    </p>
+
+<section class="dialogue">
+  <div class="avatar">
+    <img src="/18TRIP/tl/prologue/images/charas/day2/akuta.png" alt="Акута" />
+  </div>
+  <div class="text-block">
+    <span class="name name-akuta">Акута</span>
+    <div class="bubble bubble-akuta">
+І отак ми захоомеїли* й біелгеїли*, мов скажені, всю ніч. ... Монголія — тупо імба!
+    </div>
+ </div>
+</section>
+
+   <footer class="chapter-nav">
+      <span class="chapter-status">Розділ 5 / 5</span>
+      <a href="4.html" class="nav-button">← Минулий</a>
+    </footer>
+  </main>
+
+  <!-- Підключення скриптів -->
+  <script src="../../js/script.js"></script>
+  <script>
+    // Прогрес-бар
+    document.addEventListener('scroll', () => {
+      const progress = document.querySelector('.progress-bar');
+      const scrollTop = window.scrollY;
+      const docHeight = document.body.scrollHeight - window.innerHeight;
+      const scrollPercent = (scrollTop / docHeight) * 100;
+      progress.style.width = scrollPercent + '%';
+    });
+
+    // Поточний розділ
+    const currentChapter = 5;
+    const totalChapters = 5;
+    const prevLink = "4.html";
+    const nextLink = null;
+  </script>
+</body>
+</html>
