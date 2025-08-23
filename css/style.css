@@ -391,6 +391,9 @@ background: var(--header-bg, #fff);
   font-size: 0.9em;
   border-top: 1px dashed #aaa;
   padding-top: 0.5em;
+  margin: 1em 0;
+  font-style: italic;
+  color: #666;
 }
 
 .back-link {
