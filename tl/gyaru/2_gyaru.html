@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Пригоди Ґяру-Друзів — Розділ 2</title>
+  <link rel="stylesheet" href="../../css/style.css" />
+</head>
+<body>
+
+  <!-- Прогрес-бар -->
+  <div class="progress-bar-container">
+    <div class="progress-bar"></div>
+  </div>
+
+<header class="sticky-header">
+  <div class="header-title">Пригоди Ґяру-Друзів - 2</div>
+
+  <button id="theme-toggle">🌗</button>
+
+  <div class="dropdown-container">
+    <button class="dropdown-toggle">Розділи ▾</button>
+    <div id="chapterDropdown" class="dropdown-menu">
+      <a href="1_gyaru.html">Розділ 1</a>
+      <a href="2_gyaru.html">Розділ 2</a>
+      <a href="3_gyaru.html">Розділ 3</a>
+      <a href="4_gyaru.html">Розділ 4</a>
+      <a href="5_gyaru.html">Розділ 5</a>
+    </div>
+  </div>
+</header>
+
+  <main>
+
+<section class="dialogue">
+  <div class="avatar">
+    <img src="/18TRIP/tl/prologue/images/charas/ev3ns/chihiro.png" alt="Чіхіро" />
+  </div>
+  <div class="text-block">
+    <span class="name name-chihiro">Чіхіро</span>
+    <div class="bubble bubble-chihiro">
+О-БО-ЖЕ! Навіть у аеропорту зовсім інша атмосфера, ніж у Японії! Декорації такі миленькі та кольорові~
+    </div>
+  </div>
+</section>
+
+  <img class="illustration" src="images/scenes/IMG_4727.PNG" />
+    
+     <p
+      style="
+        text-align: center;
+        margin: 2em 0;
+        font-style: italic;
+        color: #666;
+      "
+    >
+      — Монгольські степи —
+    </p>
+
+
+   <footer class="chapter-nav">
+      <span class="chapter-status">Розділ 2 / 5</span>
+      <a href="1_gyaru.html" class="nav-button">← Минулий</a>
+      <a href="3_gyaru.html" class="nav-button">Наступний →</a>
+    </footer>
+  </main>
+
+  <!-- Підключення скриптів -->
+  <script src="../../js/script.js"></script>
+  <script>
+    // Прогрес-бар
+    document.addEventListener('scroll', () => {
+      const progress = document.querySelector('.progress-bar');
+      const scrollTop = window.scrollY;
+      const docHeight = document.body.scrollHeight - window.innerHeight;
+      const scrollPercent = (scrollTop / docHeight) * 100;
+      progress.style.width = scrollPercent + '%';
+    });
+
+    // Поточний розділ
+    const currentChapter = 2;
+    const totalChapters = 5;
+    const prevLink = "1_gyaru.html";
+    const nextLink = "3_gyaru.html";
+  </script>
+</body>
+</html>
