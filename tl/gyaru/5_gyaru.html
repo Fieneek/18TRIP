@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Пригоди Ґяру-Друзів — Розділ 5</title>
+  <link rel="stylesheet" href="../../css/style.css" />
+</head>
+<body>
+
+  <!-- Прогрес-бар -->
+  <div class="progress-bar-container">
+    <div class="progress-bar"></div>
+  </div>
+
+<header class="sticky-header">
+  <div class="header-title">Пригоди Ґяру-Друзів - 5</div>
+
+  <button id="theme-toggle">🌗</button>
+
+  <div class="dropdown-container">
+    <button class="dropdown-toggle">Розділи ▾</button>
+    <div id="chapterDropdown" class="dropdown-menu">
+      <a href="1_gyaru.html">Розділ 1</a>
+      <a href="2_gyaru.html">Розділ 2</a>
+      <a href="3_gyaru.html">Розділ 3</a>
+      <a href="4_gyaru.html">Розділ 4</a>
+      <a href="5_gyaru.html">Розділ 5</a>
+    </div>
+  </div>
+</header>
+
+  <main>
+    
+     <p
+      style="
+        text-align: center;
+        margin: 2em 0;
+        font-style: italic;
+        color: #666;
+      "
+    >
+— Нідерланди - Амстердамський Аеропорт Схіпгол —
+     </p>
+
+  <img class="illustration" src="images/scenes/IMG_4727.PNG" />
+
+<section class="dialogue">
+  <div class="avatar">
+    <img src="/18TRIP/tl/prologue/images/charas/ev3ns/chihiro.png" alt="Чіхіро" />
+  </div>
+  <div class="text-block">
+    <span class="name name-chihiro">Чіхіро</span>
+    <div class="bubble bubble-chihiro">
+Наша подорож у Нідерланди так швидко закінчилась! Трохи сумно, що вже треба їхати додому, чи не так~?
+    </div>
+  </div>
+</section>
+    
+<section class="dialogue">
+  <div class="avatar">
+    <img src="/18TRIP/tl/prologue/images/charas/l4mps/nagi.png" alt="Наґі" />
+  </div>
+  <div class="text-block">
+    <span class="name name-nagi">Наґі</span>
+    <div class="bubble bubble-nagi">
+... Вибач. Якби не я, то...
+    </div>
+  </div>
+</section>
+
+
+    
+   <footer class="chapter-nav">
+      <span class="chapter-status">Розділ 5 / 5</span>
+      <a href="4_gyaru.html" class="nav-button">← Минулий</a>
+    </footer>
+  </main>
+
+  <!-- Підключення скриптів -->
+  <script src="../../js/script.js"></script>
+  <script>
+    // Прогрес-бар
+    document.addEventListener('scroll', () => {
+      const progress = document.querySelector('.progress-bar');
+      const scrollTop = window.scrollY;
+      const docHeight = document.body.scrollHeight - window.innerHeight;
+      const scrollPercent = (scrollTop / docHeight) * 100;
+      progress.style.width = scrollPercent + '%';
+    });
+
+    // Поточний розділ
+    const currentChapter = 5;
+    const totalChapters = 5;
+    const prevLink = "4_gyaru.html";
+    const nextLink = null;
+  </script>
+</body>
+</html>
