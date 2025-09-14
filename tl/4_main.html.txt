@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>4 Розділ [Конструкція Щастя] — 18TRIP</title>
+  <link rel="stylesheet" href="../../css/style.css" />
+</head>
+<body>
+  <header>
+    <h1>4 Розділ [Конструкція Щастя]</h1>
+    <nav>
+      <a href="../../index.html">← Назад до перекладів</a>
+    </nav>
+    <button id="theme-toggle">🌗</button>
+  </header>
+  
+  <main class="project-layout">
+
+  <img class="illustration" src="images/scenes/chihiro_gyaru.png" />
+    
+    <section class="project-info">
+      <h2>Опис</h2>
+      <p>Кафка хоче, щоб останні декілька мерів були власниками бізнесу, які зможуть надавати послуги мандрівникам...</p>
+      <p><strong>Переклад:</strong> Джеймс</p>
+      <p><strong>Редактура:</strong> Бергамот</p>
+      <p><strong>Джерело:</strong> <a href="https://yukikaze.love/tl/main/4/0" target="_blank">yukikaze.love/tl/main/1/0</a></p>
+    </section>
+
+    <section class="chapter-list">
+      <h2>Розділи</h2>
+      <ul class="chapters">
+        <li><a href="1_4.html">Добробут власноруч</a></li>
+        <li><a href="2_4.html">Нічний офіс</a></li>
+        <li><a href="3_4.html">Перший напій вечора</a></li>
+        <li><a href="4_4.html">Прохання Шуґараеля</a></li>
+ 
+
+      </ul>
+    </section>
+  </main>
+
+  <script src="../../js/script.js"></script>
+</body>
+</html>
