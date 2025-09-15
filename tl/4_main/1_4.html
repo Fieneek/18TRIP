@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Пролог — Наша перша подорож</title>
+  <link rel="stylesheet" href="../../css/style.css" />
+</head>
+<body>
+
+  <!-- Прогрес-бар -->
+  <div class="progress-bar-container">
+    <div class="progress-bar"></div>
+  </div>
+
+<header class="sticky-header">
+  <div class="header-title">Пролог - 4</div>
+
+  <button id="theme-toggle">🌗</button>
+
+  <div class="dropdown-container">
+    <button class="dropdown-toggle">Розділи ▾</button>
+    <div id="chapterDropdown" class="dropdown-menu">
+      <a href="1_prologue.html">Розділ 1</a>
+      <a href="2_prologue.html">Розділ 2</a>
+      <a href="3_prologue.html">Розділ 3</a>
+      <a href="4_prologue.html">Розділ 4</a>
+      <a href="5_prologue.html">Розділ 5</a>
+      <a href="6_prologue.html">Розділ 6</a>
+      <a href="7_prologue.html">Розділ 7</a>
+      <a href="8_prologue.html">Розділ 8</a>
+    </div>
+  </div>
+</header>
+
+  <main>
+
+    <p
+      style="
+        text-align: center;
+        margin: 2em 0;
+        font-style: italic;
+        color: #666;
+      "
+    >
+— Початок спогаду —
+    </p>
+
+<section class="dialogue">
+  <div class="avatar">
+    <img src="/18TRIP/tl/prologue/images/charas/mc_conductors/kaede.png" alt="Каеде">
+  </div>
+  <div class="text-block">
+    <span class="name name-kaede">Каеде</span>
+    <div class="bubble bubble-kaede">
+Ти простудишся, якщо ми тут залишимось.
+    </div>
+  </div>
+</section>
+
+   <footer class="chapter-nav">
+      <span class="chapter-status">Розділ 1 / 8</span>
+      <a href="2_prologue.html" class="nav-button">Наступний →</a>
+    </footer>
+  </main>
+
+  <script>
+    // Прогрес-бар
+    document.addEventListener('scroll', () => {
+      const progress = document.querySelector('.progress-bar');
+      const scrollTop = window.scrollY;
+      const docHeight = document.body.scrollHeight - window.innerHeight;
+      const scrollPercent = (scrollTop / docHeight) * 100;
+      progress.style.width = scrollPercent + '%';
+    });
+
+    // Поточний розділ
+    const currentChapter = 1;
+    const totalChapters = 8;
+    const prevLink = null;
+    const nextLink = "2_4.html";
+  </script>
+    <!-- Підключення скриптів -->
+  <script src="../../js/script.js"></script>
+</body>
+</html>
